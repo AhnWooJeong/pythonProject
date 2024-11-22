@@ -29,8 +29,10 @@ with open('pokemon.txt','w', encoding='UTF-8') as file :
     print('name: 피카츄', file=file)
     print('type: 전기', file=file)
 
-
-
+file = open('pokemon.txt','w', encoding='UTF-8')
+print('name: 피카츄', file=file)
+print('type: 전기', file=file)
+file.close()
 
 
 
