@@ -12,7 +12,9 @@
     \n : 개행(줄바꿈)
 
 '''
-
+# 1. 이스케이프 문자 활용
+pokemon_info = 'ID : \'피카츄\'\n타입: \'전기\'\tLevel: 25'
+print(pokemon_info)
 
 
 
