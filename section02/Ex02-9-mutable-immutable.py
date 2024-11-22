@@ -51,9 +51,6 @@ print('메모리 주소:', id(tuple1))
 tuple1 =('러스트', 'go','React')
 print('tuple1:', tuple1)
 print('메모리 주소:', id(tuple1))
-#커밋
-
-
 
 
 
