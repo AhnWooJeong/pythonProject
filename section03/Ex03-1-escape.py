@@ -10,14 +10,15 @@
     \' : 작은 따옴표
     \" : 큰 따옴표
     \n : 개행(줄바꿈)
-
+    \\ : 백슬래시
 '''
 # 1. 이스케이프 문자 활용
 pokemon_info = 'ID : \'피카츄\'\n타입: \'전기\'\tLevel: 25'
 print(pokemon_info)
 
-
-
+# 2. 경로 표시
+file_path = 'C:\\Program Files\\Google'
+print('폴더 경로:', file_path)
 
 
 
