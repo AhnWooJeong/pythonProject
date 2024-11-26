@@ -20,7 +20,7 @@ print(f'레벨 제곱: {level ** 2}')    # 거듭제곱
 damage = 75
 defense = 30
 actual_damage = damage - defense
-print(f'실제 데미지: {actual_damage}')
+print(f'실제 데미지: {actual_damage}')\n
 
 # 3. 몫, 나머지 - 아이템 분배
 potions = 15

@@ -31,7 +31,7 @@ print(f'tmp 사용 교환 후-체력: {hp}, 마나: {mp}')
 exp = 0
 exp += 50   # exp = exp + 50
             # 50의 경험치 획득
-print(f'경험치 획득: {exp}')
+print(f'경험치 획득: {exp}')\n
 
 
 

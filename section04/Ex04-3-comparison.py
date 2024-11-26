@@ -14,7 +14,7 @@ print(f'피카츄 레벨 > 파이리 레벨: {pikachu_lv > charmander_lv}')
 # 2. 타입 비교
 type1 = "불꽃"
 type2 = "물"
-print(f'같은 타입? {type1 == type2}')
+print(f'같은 타입? {type1 == type2}')\n
 
 
 
