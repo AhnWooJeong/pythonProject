@@ -16,7 +16,7 @@ print('5. 절대값 맵핑:', list(map(abs,number)))  # map(적용할 함수, �
 print('5-2. 절대값 함수:', abs(number[1]))
 print('6. 리스트 길이:', len(number))
 
-# 2. 예제2 : 문자열과 관련된 내장함수들
+# 2. 예제2 : 문자열과 관련된 함수들
 text = "Python Programming 123"
 words = ["apple", "banana", "cherry", "date"]
 str_alpha = "ABC"
@@ -29,12 +29,25 @@ print("3. 소문자로:", text.lower())                     # lower()
 print("4. 문자열 분할:", text.split())                  # split()
 print("5. ASCII 코드:", ord('A'))                      # ord()
 print("6. ASCII to 문자:", chr(65))                    # chr()
-print("7. 문자열 위치:", text.find("Pro"))             # find()
+print("7-1. 문자열 위치:", text.find("Pro"))             # find()
+print("7-2. 문자열 위치:", text.index("Pro"))             # index() - 없으면 에러
 print("8. 문자 개수:", text.count('P'))                # count()
 print("9. 공백 제거:", text.strip())                   # strip()
 print("10. 문자열 합치기:", " ".join(words))           # join()
 
-
+# 3. 예제3 : 수학과 관련된 함수들
+import math
+numbers = [3.14, -2.7, 5.0, -1.8, 2.5]
+print("1. 반올림:", round(3.7))                        # round()
+print("2. 내림:", math.floor(3.7))                     # floor()
+print("3. 올림:", math.ceil(3.2))                      # ceil()
+print("4. 절대값:", abs(-5))                          # abs()
+print("5. 거듭제곱:", pow(2, 3))                      # pow()
+print("6. 제곱근:", math.sqrt(16))                    # sqrt()
+print("7. 로그:", math.log(10))                       # log()
+print("8. 삼각함수:", math.sin(math.pi/2))            # sin()
+print("9. 지수:", math.exp(2))                        # exp()
+print("10. 팩토리얼:", math.factorial(5))             # factorial()
 
 
 
