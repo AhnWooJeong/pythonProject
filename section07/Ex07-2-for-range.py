@@ -9,7 +9,6 @@ range()
     예) range(1, 10) => 1. 2, 3, 4, 5, 6. 7, 8, 9
 '''
 dan = 2
-
 # range(stop)
 for n in range(10):                # range(10) : 0 ~ 9
     print(f'{dan} X {n} = {dan * n}', end=" ")

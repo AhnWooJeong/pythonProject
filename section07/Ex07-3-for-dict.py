@@ -15,11 +15,13 @@ for word in eng_dict:
 
 eng_dict_keys = eng_dict.keys()
 print(eng_dict_keys)
+
 for k in eng_dict_keys:
     print(f'eng_dict의 key: {k}')
 
 eng_dict_values = eng_dict.values()
 print(eng_dict_values)
+
 for v in eng_dict_values:
     print(f'eng_dict의 value: {v}')
 
