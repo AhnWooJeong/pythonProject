@@ -31,6 +31,7 @@
    *
 
 '''
+# 1번
 i = 0
 while i < 7:
     j=0
@@ -39,3 +40,8 @@ while i < 7:
         j += 1
     print()
     i += 1
+  
+# 2번  
+a = 4
+for i in range(1,a+1):
+    print(' ' * (a-i) + '*' * i)
