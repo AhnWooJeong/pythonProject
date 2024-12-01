@@ -45,3 +45,8 @@ while i < 7:
 a = 4
 for i in range(1,a+1):
     print(' ' * (a-i) + '*' * i)
+
+# 3번
+a = 4
+for i in range(1,a+1):
+    print(' ' * (a-i) + '*' * (2*i-1))
