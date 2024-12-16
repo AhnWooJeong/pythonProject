@@ -15,8 +15,8 @@ pip install webdriver-manager
 import traceback
 
 import os
-import  time
-import  urllib.request
+import time
+import urllib.request
 
 
 from selenium import webdriver
@@ -39,9 +39,6 @@ def download_images(keyword, num_images=10, output_dir='images'):
 
     # 드라이버를 통해 Google 페이지 접속
     driver.get("https://images.google.com/")
-
-    # 키워드
-    # keyword = '차은우'
 
     # 검색어 입력
     search_bar = driver.find_element(By.NAME, 'q')
