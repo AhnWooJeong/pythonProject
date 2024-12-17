@@ -77,4 +77,6 @@ linked_list.add_node(9)
 linked_list.add_node(1)
 linked_list.add_node(6)
 
+linked_list.insert_node(9, 99)
+linked_list.delete_node(1)
 linked_list.print_list()
