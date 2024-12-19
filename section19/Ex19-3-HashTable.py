@@ -16,30 +16,39 @@ class HashTable:
 
     def __init__(self, size):
         self.size = size
+        #  self.hash_table = [None, None, None, None, None, None, None, None, None, None]
         self.hash_table = [None] * self.size
-        print(type(self. hash_table))
-        print(self.hash_table)
 
     def has_function(self, key):
         return hash(key) % self.size
 
     def insert(self, key, value):
+        '''
+                 size = 10
+                 key = 'John Doe', value='555-555-5555'
+
+                 hash_index = 7
+                 hash_table = [None, None, None, None, None, None, None, [('John Doe', value='555-555-5555')], None, None]
+        '''
         hash_index = self.has_function(key)
 
         if self.hash_table[hash_index] is None:
             self.hash_table[hash_index] = []
 
         self.hash_table[hash_index].append((key, value))
-        print(self.hash_table)
 
     def search(self, key):
         print(self.hash_table)
+        '''
+                [None, None, [('Jane Doe', '555-555-5556')], None, [('Jim Doe', '555-555-5557')], None, [('김태호', '555-555-5558')], None, [('John Doe', '555-555-5555')], None]
+                key = 'John Doe'
+                hash_index = 8
+                bucket = [('John Doe', '555-555-5555')]
+        '''
         hash_index = self.has_function(key)
         bucket = self.hash_table[hash_index]
         if bucket is None:
             return None
-
-        print(bucket)
 
         for k, v in bucket: #튜플의 값을 언패킹으로 k,v로 받는다.
             if k == key:
