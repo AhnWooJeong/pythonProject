@@ -11,9 +11,11 @@ from unittest.mock import right
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
-
+    '''
+    arr = [5, 2, 8, 6, 1, 9, 3, 7]
+    
+    '''
     mid = len(arr) // 2
-
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
 
