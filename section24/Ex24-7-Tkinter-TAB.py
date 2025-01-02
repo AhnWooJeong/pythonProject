@@ -40,4 +40,6 @@ class SimpleNotebookApp:
         self.root.mainloop()
 
 # 실행코드
-if __name__
+if __name__ == "__main__":
+    app = SimpleNotebookApp()
+    app.run()
