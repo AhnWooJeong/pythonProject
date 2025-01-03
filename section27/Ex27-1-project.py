@@ -38,7 +38,7 @@ class MultiAIApp:
         self.setup_chat_tab()   # 1. 채팅탭 구성
 
     def setup_chat_tab(self):
-        pass
+
 
 
 # 실행코드
