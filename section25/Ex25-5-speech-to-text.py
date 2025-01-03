@@ -26,11 +26,3 @@ def transcribe_audio(audio_file_path, language='ko'):
 # 실행코드
 result = transcribe_audio('speech.mp3', language='en')
 print('STT:', result)
-
-
-
-
-
-
-
-
