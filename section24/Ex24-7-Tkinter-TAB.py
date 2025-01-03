@@ -36,6 +36,18 @@ class SimpleNotebookApp:
         label1.pack(padx=20, pady=20)
         notebook.add(tab1, text='탭 1')
 
+        # 두 번째 탭
+        tab2 = ttk.Frame(notebook)
+        label2 = ttk.Label(tab2, text="두 번째 탭의 내용입니다.")
+        label2.pack(padx=20, pady=20)
+        notebook.add(tab2, text="탭 2")
+
+        # 세 번째 탭
+        tab3 = ttk.Frame(notebook)
+        label3 = ttk.Label(tab3, text="세 번째 탭의 내용입니다.")
+        label3.pack(padx=20, pady=20)
+        notebook.add(tab3, text="탭 3")
+
     def run(self):
         self.root.mainloop()
 
