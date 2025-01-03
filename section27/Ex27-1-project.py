@@ -4,10 +4,17 @@
 '''
 
 import tkinter as tk
+from http.client import responses
+
 import sv_ttk   # pip install sv_ttk
 from tkinter import ttk, scrolledtext
 
+import  threading   # 여러 작업을 동시에 실행할 수 있게 해준다.
+from openai import OpenAI, api_key
+
 from PIL.ImageOps import expand
+from pyexpat.errors import messages
+from requests.packages import target
 
 
 class MultiAIApp:
@@ -26,6 +33,9 @@ class MultiAIApp:
         self.style.configure('Chat.TFrame', padding=10)
         self.style.configure('Title.TLabel', font=('Helvetica', 12, 'bold'))
         self.style.configure('Control.TFrame', padding=5)
+
+        self.client = OpenAI()
+        self.conversation_history = []
 
         # UI 설정 메서드 호출
         self.setup_ui()
@@ -92,17 +102,45 @@ class MultiAIApp:
         ttk.Button(
             input_frame,
             text='전송',
+            style='Accent.TButton',
             command=self.send_message
         ).pack(side='right')
 
     def send_message(self, event=None):
-        print('전송', self.message_entry.get())
 
+        messages = self.message_entry.get().strip()
 
+        if not messages:
+            return 
+        
+        # 입력 초기화
+        self.message_entry.delete(0, tk.END)
+    
+        # 채팅창에 메세지 추가
+        self.chat_area.insert(tk.END, f'나: {messages}\n')
+        self.chat_area.see(tk.END) # 스크롤 가장 아래로
 
+        threading.Thread(target=self.get_gpt_response, args=(messages,)).start()
 
+    def get_gpt_response(self, message):
 
+        self.conversation_history.append({'role':'user', 'content': message})
+        response = self.client.chat.completions.create(
+            model='gpt-4o-mini',
+            messages=self.conversation_history
+        )
 
+        assistant_message = response.choices[0].message.content # GPT 응답 TEXT
+        self.conversation_history.append(
+            {'role':'assistant', 'content': assistant_message}
+        )
+
+        # UI 업데이트 요청
+        self.root.after(0, self.update_chat_area, assistant_message)
+
+    def update_chat_area(self, response_text):
+        self.chat_area.insert(tk.END, f'AI: {messages}\n')
+        self.chat_area.see(tk.END)  # 스크롤 가장 아래로
 
 # 실행코드
 if __name__ == '__main__':

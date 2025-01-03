@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import scrolledtext, ttk, filedialog
 from docx import Document
 from datetime import datetime
-from openai import OpenAI
+from openai import OpenAI, api_key
 import threading
 import os
 import base64
